@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tartarus Protocol - Kickstarter Ficticio</title>
+    <style>
+        :root {
+            --ks-green: #05ce78;
+            --ks-green-dark: #04a560;
+            --bg-color: #fbfbfa;
+            --text-dark: #282828;
+            --text-light: #656969;
+            --border: #e8e8e8;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+        }
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .tagline { color: var(--text-light); font-size: 1.2em; }
+        
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            gap: 40px;
+        }
+        
+        /* Columna Izquierda: Historia, Video, Equipo */
+        .main-content {
+            flex: 2;
+            background: #fff;
+            padding: 40px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        
+        .video-placeholder {
+            width: 100%;
+            height: 400px;
+            background-color: #2c2c2c;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #e0e0e0;
+            border: 2px dashed #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            color: #666;
+            font-style: italic;
+        }
+
+        h2 { border-bottom: 2px solid var(--ks-green); padding-bottom: 10px; margin-top: 40px; }
+        
+        /* Columna Derecha: Recompensas y Progreso */
+        .sidebar {
+            flex: 1;
+        }
+        
+        .funding-stats {
+            background: #fff;
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #e8e8e8;
+            border-radius: 5px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        .progress-fill { width: 45%; height: 100%; background: var(--ks-green); }
+        .btn-back {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: var(--ks-green);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-back:hover { background: var(--ks-green-dark); }
+        
+        .reward-tier {
+            background: #fff;
+            padding: 25px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s;
+        }
+        .reward-tier:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: var(--ks-green);
+        }
+        .reward-price { font-size: 1.5em; font-weight: bold; color: var(--text-dark); margin-bottom: 10px;}
+        .reward-title { font-weight: bold; color: var(--text-dark); margin-bottom: 15px;}
+        
+        /* Presupuesto y Marketing */
+        .budget-list, .team-list { list-style: none; padding: 0; }
+        .budget-list li, .team-list li { margin-bottom: 10px; padding-left: 20px; border-left: 3px solid var(--ks-green); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>TARTARUS PROTOCOL</h1>
+        <p class="tagline">Domina la gravedad. Sobrevive a la masacre. Escapa de la luna prisión.</p>
+    </header>
+
+    <div class="container">
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="main-content">
+            <!-- Tráiler Placeholder -->
+            <div class="video-placeholder">
+                ▶ [Espacio para el Tráiler Promocional (30-60 seg)]
+            </div>
+
+            <h2>Acerca del Proyecto</h2>
+            <p><strong>Bienvenidos a Caronte-IX</strong>, la prisión de máxima seguridad corporativa orbitando un gigante gaseoso. Eres Axel Vance, un ex-ingeniero condenado a pudrirse en la instalación que ayudó a diseñar. Todo cambia cuando un brote biológico convierte a los reclusos en mutantes.</p>
+            
+            <div class="image-placeholder" style="border: none; background: transparent; padding: 0;">
+                <img src="AboutGame.png" alt="Concepto del juego" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; border: 1px solid #e8e8e8;" />
+            </div>
+
+            <p>En medio del motín, recuperas el <strong>Prototipo G.R.I.P.</strong> Ahora, sin munición y rodeado, debes usar la propia arquitectura letal de la prisión y los cuerpos de tus enemigos para abrirse paso.</p>
+
+            <h2>Mecánicas Principales</h2>
+            <ul>
+                <li><strong>Telequinesis Táctica (G.R.I.P.):</strong> Atrae objetos o levanta enemigos enteros en el aire en este Action-Platformer 2.5D.</li>
+                <li><strong>Gore Ambiental:</strong> Usa la profundidad. Lanza enemigos hacia el fondo (background) para empalarlos en maquinaria.</li>
+                <li><strong>Movilidad de Propulsión:</strong> Botas de salto para <em>dashes</em> y vuelos cortos.</li>
+            </ul>
+
+            <div class="image-placeholder" style="border: none; background: transparent; padding: 0;">
+                <img src="EnemyArt.png" alt="Recluso de lastre" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; border: 1px solid #e8e8e8;" />
+            </div>
+
+            <h2>Presupuesto de Desarrollo</h2>
+            <p>Hemos calculado rigurosamente nuestro alcance para un ciclo de producción de 12 meses. Los fondos irán destinados a:</p>
+            <ul class="budget-list">
+                <li><strong>55% - Salarios del Equipo:</strong> Remuneración para los 8 integrantes (programación, diseño, arte).</li>
+                <li><strong>20% - Costes Operativos:</strong> Oficina híbrida en las afueras de Madrid y equipos Apple.</li>
+                <li><strong>15% - Licencias y Software:</strong> Motor gráfico, herramientas de audio y suite de diseño.</li>
+                <li><strong>10% - Marketing y Recompensas:</strong> Producción de merchandising físico, comisiones de Kickstarter e impuestos.</li>
+            </ul>
+
+            <h2>Estrategia de Promoción</h2>
+            <p>Nuestra estrategia para hacer crecer la comunidad antes y durante la campaña incluye:</p>
+            <ul>
+                <li><strong>Redes Sociales:</strong> Campaña en X (Twitter) y TikTok usando el hashtag <em>#TartarusProtocol</em>, compartiendo clips cortos del uso de la mecánica G.R.I.P. (combate físico = alta viralidad).</li>
+                <li><strong>Diarios de Desarrollo (DevLogs):</strong> Publicaciones quincenales en YouTube y Medium detallando el proceso de diseño de los enemigos y el arte 2.5D.</li>
+                <li><strong>Demo para Creadores:</strong> Envío de una *Vertical Slice* (demo de 15 mins) a streamers medianos enfocados en juegos Indie y Survival Horror.</li>
+            </ul>
+
+            <h2>El Equipo</h2>
+            <ul class="team-list">
+                <li><strong>Programación (3):</strong> Expertos en físicas de motores, IA enemiga y herramientas de nivel.</li>
+                <li><strong>Diseño de Juego (3):</strong> Especialistas en level design 2.5D, balanceo de combate y narrativa.</li>
+                <li><strong>Arte y Sonido (2):</strong> Dirección de arte, modelado modular y diseño sonoro.</li>
+            </ul>
+        </div>
+
+        <!-- BARRA LATERAL (RECOMPENSAS Y ESTADÍSTICAS) -->
+        <div class="sidebar">
+            <div class="funding-stats">
+                <h1 style="margin:0; font-size: 2.5em;">€818,450</h1>
+                <p style="margin: 0; color: var(--text-light);">contribuidos de la meta de €1.017.822</p>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <p><strong>14516</strong> patrocinadores<br><strong>83</strong> días restantes</p>
+                <button class="btn-back">Respaldar este proyecto</button>
+            </div>
+
+            <h3 style="margin-top: 30px;">Recompensas</h3>
+
+            <!-- Tier 1 -->
+            <div class="reward-tier">
+                <div class="reward-price">Aportación de €15 o más</div>
+                <div class="reward-title">Prisionero de Nivel 1 (Early Bird)</div>
+                <p>Copia digital del juego para Steam o Consolas. Precio especial para los primeros patrocinadores.</p>
+                <p><em>Incluye:</em></p>
+                <ul>
+                    <li>Copia digital del juego</li>
+                    <li>Tu nombre en los créditos</li>
+                </ul>
+            </div>
+
+            <!-- Tier 2 -->
+            <div class="reward-tier">
+                <div class="reward-price">Aportación de €30 o más</div>
+                <div class="reward-title">Guardia de Seguridad</div>
+                <p>El paquete estándar. Además del juego, recibes la brutal banda sonora original y un libro de arte digital.</p>
+                <p><em>Incluye:</em></p>
+                <ul>
+                    <li>Copia digital del juego</li>
+                    <li>Banda Sonora Digital (OST)</li>
+                    <li>Libro de Arte Digital (PDF)</li>
+                </ul>
+            </div>
+
+            <!-- Tier 3 -->
+            <div class="reward-tier">
+                <div class="reward-price">Aportación de €150 o más</div>
+                <div class="reward-title">Diseña un Mutante</div>
+                <p>¡Inmortalízate en el juego! Nuestro equipo de arte trabajará contigo para diseñar visualmente a uno de los reclusos que Axel masacrará en la prisión.</p>
+                <p><em>Incluye:</em></p>
+                <ul>
+                    <li>Todo lo anterior</li>
+                    <li>Diseño colaborativo de un enemigo básico</li>
+                    <li>Acceso anticipado a la Beta Cerrada</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
